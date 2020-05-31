@@ -1,4 +1,4 @@
-function pdfToHTML(){
+async function pdfToHTML(){
 var pdf = new jsPDF();
 
 var facturationDate = new Date();
