@@ -138,7 +138,7 @@ var totalTTC = totalHT + TVA;
 pdf.autoTable({
   head: [['TOTAL HT', 'TVA (20%)', 'TOTAL TTC']],
   body: [
-    [totalHT, TVA, totalTTC + ' EUR'],
+    [totalHT.toFixed(3).slice(0,-1), TVA.toFixed(3).slice(0,-1), totalTTC.toFixed(3).slice(0,-1) + ' EUR'],
   ],
   startY: 225,
   tableWidth: 70,
