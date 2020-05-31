@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>html2pdf</title>
+</head>
+<body>
+<center>
+	<h1>Création de facture :</h1>
+
+	<div id="invoiceAdress">
+		<h3>Adresse de facturation</h3>
+		<div>
+			<label for="name">Nom : </label>
+			<input type="text" placeholder="Prénom et nom" id="name"/>
+		</div>
+		<div>
+			<label for="adress">Adresse : </label>
+			<input type="text" placeholder="13, rue de la Liberte" id="adress"/>
+		</div>
+		<div>
+			<label for="zipCode">Code postal : </label>
+			<input type="text" placeholder="04100" id="zipCode"/>
+		</div>
+		<div>
+			<label for="city">Ville : </label>
+			<input type="text" placeholder="Manosque" id="city"/>
+		</div>
+	</div>
+
+	<div id="carInformation">
+		<h3>Véhicule</h3>
+		<div>
+			<label for="brand">Marque : </label>
+			<input type="text" placeholder="SEAT" id="brand"/>
+		</div>
+		<div>
+			<label for="model">Modèle : </label>
+			<input type="text" placeholder="IBIZA IV TDI" id="model"/>
+		</div>
+		<div>
+			<label for="firstDate">1ere MEC : </label>
+			<input type="text" placeholder="01/01/2010" id="firstDate"/>
+		</div>
+		<div>
+			<label for="registration">Immatriculation : </label>
+			<input type="text" placeholder="AA123BB" id="registration"/>
+		</div>
+		<div>
+			<label for="kil">Kilometrage : </label>
+			<input type="text" placeholder="100000" id="kil"/>
+		</div>
+		<div>
+			<label for="serialNum">Num serie : </label>
+			<input type="text" placeholder="gdhdjyztafkhdg125ksj" id="serialNum"/>
+		</div>
+		<div>
+			<label for="power">Puissance : </label>
+			<input type="text" placeholder="5" id="power"/>
+		</div>
+		<div>
+			<label for="energy">Energie : </label>
+			<input type="text" placeholder="GO" id="energy"/>
+		</div>
+		<div>
+			<label for="kind">Genre : </label>
+			<input type="text" placeholder="VP" id="kind"/>
+		</div>
+	</div>
+
+	<div id="items">
+		<h3>Articles de la facture</h3>
+		<table id="Mytable" style="width:90%; border: none;">
+		  <tr>
+		    <th style="background-color: red; width: 50%">DESCRIPTION</th>
+		    <th style="background-color: red; width: 25%">QTE/TEMPS</th> 
+		    <th style="background-color: red; width: 25%">PX UNITAIRE</th>
+		  </tr>
+		  <tr>
+		    <td><input type="text" id="item0Desc"/></td>
+		    <td><input type="text" id="item0Qte"/></td>
+		    <td><input type="text" id="item0Price"/></td>
+		  </tr>
+		  <tr>
+		    <td><input type="text" id="item1Desc"/></td>
+		    <td><input type="text" id="item1Qte"/></td>
+		    <td><input type="text" id="item1Price"/></td>
+		  </tr>
+		  <tr>
+		    <td><input type="text" id="item2Desc"/></td>
+		    <td><input type="text" id="item2Qte"/></td>
+		    <td><input type="text" id="item2Price"/></td>
+		  </tr>
+		  <tr>
+		    <td><input type="text" id="item3Desc"/></td>
+		    <td><input type="text" id="item3Qte"/></td>
+		    <td><input type="text" id="item3Price"/></td>
+		  </tr>
+		  <tr>
+		    <td><input type="text" id="item4Desc"/></td>
+		    <td><input type="text" id="item4Qte"/></td>
+		    <td><input type="text" id="item4Price"/></td>
+		  </tr>
+		  <tr>
+		    <td><input type="text" id="item5Desc"/></td>
+		    <td><input type="text" id="item5Qte"/></td>
+		    <td><input type="text" id="item5Price"/></td>
+		  </tr>
+		  <tr>
+		    <td><input type="text" id="item6Desc"/></td>
+		    <td><input type="text" id="item6Qte"/></td>
+		    <td><input type="text" id="item6Price"/></td>
+		  </tr>
+		  <tr>
+		    <td><input type="text" id="item7Desc"/></td>
+		    <td><input type="text" id="item7Qte"/></td>
+		    <td><input type="text" id="item7Price"/></td>
+		  </tr>
+		  <tr>
+		    <td><input type="text" id="item8Desc"/></td>
+		    <td><input type="text" id="item8Qte"/></td>
+		    <td><input type="text" id="item8Price"/></td>
+		  </tr>
+		  <tr>
+		    <td><input type="text" id="item9Desc"/></td>
+		    <td><input type="text" id="item9Qte"/></td>
+		    <td><input type="text" id="item9Price"/></td>
+		  </tr>
+		  <tr>
+		    <td><input type="text" id="item10Desc"/></td>
+		    <td><input type="text" id="item10Qte"/></td>
+		    <td><input type="text" id="item10Price"/></td>
+		  </tr>
+		</table>
+	</div>
+
+</center>
+
+	<a href="javascript:pdfToHTML()">Créer la facture</a>
+
+	<script type="text/javascript" src="jspdf.min.js"></script>
+	<script type="text/javascript" src="pdfFromHTML.js"></script>
+	<script type="text/javascript" src="jspdf.plugin.autotable.js"></script>
+	<script type="text/javascript" src="jquery-2.1.3.js"></script>
+</body>
+</html>
