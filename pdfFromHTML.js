@@ -6,21 +6,26 @@ var facturationDate = new Date();
 // Garage
 pdf.setFontSize(14);
 pdf.setFontStyle("bold");
-pdf.text("Fodel Auto Garage", 20, 30);
+pdf.text("FODIL AUTOS", 20, 30);
+pdf.setFontSize(8);
+pdf.setFontStyle("normal");
+pdf.text("Entretien et reparation de vehicules automobiles legers (4520A)", 20, 35);
 pdf.setFontSize(11);
 pdf.setFontStyle("normal");
-pdf.text("665 Avenue de la Liberation", 20, 37);
-pdf.text("04100 Manosque", 20, 42);
-pdf.text("Tel : 06 10 20 30 40", 20, 47);
+pdf.text("183 RUE DE L ABBE HENRI ALIVON", 20, 40);
+pdf.text("04100 MANOSQUE", 20, 45);
+pdf.text("Tel : 06 61 58 12 83", 20, 50);
+pdf.text("SIRET : 87936932000020", 20, 55);
+
 
 // Client
 var nomPrenom = document.getElementById('name').value;
 var adress = document.getElementById('adress').value;
 var zipCode = document.getElementById('zipCode').value;
 var city = document.getElementById('city').value;
-pdf.text(nomPrenom, 125, 50);
-pdf.text(adress, 125, 55);
-pdf.text(zipCode + ', ' + city, 125, 60);
+pdf.text(nomPrenom, 125, 55);
+pdf.text(adress, 125, 60);
+pdf.text(zipCode + ', ' + city, 125, 65);
 
 // Facture
 pdf.setFontSize(14);
@@ -110,7 +115,7 @@ var item10Qte = document.getElementById('item10Qte').value;
 var item10Price = document.getElementById('item10Price').value;
 
 pdf.autoTable({
-  head: [['DESCRIPTION', 'QTE/TEMPS', 'PX UNITAIRE', 'MONTANT HT']],
+  head: [['DESCRIPTION', 'QTE/TEMPS', 'PX UNITAIRE', 'MONTANT TTC']],
   body: [
     [item0Desc, item0Qte, item0Price, item0Qte*item0Price],
     [item1Desc, item1Qte, item1Price, item1Qte*item1Price],
@@ -127,12 +132,12 @@ pdf.autoTable({
   startY: 125,
 });
 
-var totalHT = (item0Qte*item0Price) + (item1Qte*item1Price) + (item2Qte*item2Price) + 
+var totalTTC = (item0Qte*item0Price) + (item1Qte*item1Price) + (item2Qte*item2Price) + 
 (item3Qte*item3Price) + (item4Qte*item4Price) + (item5Qte*item5Price) +
 (item6Qte*item6Price) + (item7Qte*item7Price) + (item8Qte*item8Price) +   
 (item9Qte*item9Price) + (item10Qte*item10Price);
-var TVA = (totalHT*20)/100;
-var totalTTC = totalHT + TVA;
+var TVA = (totalTTC*20)/100;
+var totalHT = totalTTC - TVA;
 
 // Total + TVA
 pdf.autoTable({
@@ -145,9 +150,8 @@ pdf.autoTable({
   margin: {top: 0, right: 0, bottom: 0, left: 126},
 });
 
-
 pdf.save('facture_'+ timeRef(facturationDate) +'.pdf');
-
+}
 
 
 function formattedDate(d) {
@@ -173,5 +177,4 @@ function timeRef(d) {
   let s = String(d.getSeconds());  
   if (s.length < 2) s = '0' + s;
   return `${day}${month}${h}${m}${s}`;
-}
 }
