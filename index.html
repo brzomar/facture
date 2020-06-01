@@ -2,143 +2,144 @@
 <html>
 <head>
 	<title>html2pdf</title>
+
+	<link rel="stylesheet" type="text/css" href="facture.css">
+
+	<script type="text/javascript" src="jspdf.min.js"></script>
+	<script type="text/javascript" src="pdfFromHTML.js"></script>
+	<script type="text/javascript" src="jspdf.plugin.autotable.js"></script>
 </head>
 <body>
-<center>
-	<h1>Création de facture :</h1>
+	<h1 class="facture-main textCenter">Création de facture pour  : FODIL AUTOS</h1>
 
-	<div id="invoiceAdress">
+	<div id="invoiceAdress" class="facture-main">
 		<h3>Adresse de facturation</h3>
-		<div>
-			<label for="name">Nom : </label>
-			<input type="text" placeholder="Prénom et nom" id="name"/>
+		<div class="facturation-group">
+			<label for="name" class="facturation-label">Nom</label>
+			<input type="text" placeholder="Prénom et nom" id="name" class="wid90"/>
 		</div>
-		<div>
-			<label for="adress">Adresse : </label>
-			<input type="text" placeholder="13, rue de la Liberte" id="adress"/>
+		<div class="facturation-group">
+			<label for="adress" class="facturation-label">Adresse</label>
+			<input type="text" placeholder="13, rue de la Liberte" id="adress" class="wid90"/>
 		</div>
-		<div>
-			<label for="zipCode">Code postal : </label>
-			<input type="text" placeholder="04100" id="zipCode"/>
+		<div class="facturation-group">
+			<label for="zipCode" class="facturation-label">Code postal</label>
+			<input type="text" placeholder="04100" id="zipCode" class="wid90"/>
 		</div>
-		<div>
-			<label for="city">Ville : </label>
-			<input type="text" placeholder="Manosque" id="city"/>
+		<div class="facturation-group">
+			<label for="city" class="facturation-label">Ville</label>
+			<input type="text" placeholder="Manosque" id="city" class="wid90"/>
 		</div>
 	</div>
 
-	<div id="carInformation">
+	<div id="carInformation" class="facture-main">
 		<h3>Véhicule</h3>
-		<div>
-			<label for="brand">Marque : </label>
-			<input type="text" placeholder="SEAT" id="brand"/>
+		<div class="facturation-group">
+			<label for="brand" class="facturation-label">Marque</label>
+			<input type="text" placeholder="SEAT" id="brand" class="wid90"/>
 		</div>
-		<div>
-			<label for="model">Modèle : </label>
-			<input type="text" placeholder="IBIZA IV TDI" id="model"/>
+		<div class="facturation-group">
+			<label for="model" class="facturation-label">Modèle</label>
+			<input type="text" placeholder="IBIZA IV TDI" id="model" class="wid90"/>
 		</div>
-		<div>
-			<label for="firstDate">1ere MEC : </label>
-			<input type="text" placeholder="01/01/2010" id="firstDate"/>
+		<div class="facturation-group">
+			<label for="firstDate" class="facturation-label">1ere MEC</label>
+			<input type="text" placeholder="01/01/2010" id="firstDate" class="wid90"/>
 		</div>
-		<div>
-			<label for="registration">Immatriculation : </label>
-			<input type="text" placeholder="AA123BB" id="registration"/>
+		<div class="facturation-group">
+			<label for="registration" class="facturation-label">Immatriculation</label>
+			<input type="text" placeholder="AA123BB" id="registration" class="wid90"/>
 		</div>
-		<div>
-			<label for="kil">Kilometrage : </label>
-			<input type="text" placeholder="100000" id="kil"/>
+		<div class="facturation-group">
+			<label for="kil" class="facturation-label">Kilometrage</label>
+			<input type="text" placeholder="100000" id="kil" class="wid90"/>
 		</div>
-		<div>
-			<label for="serialNum">Num serie : </label>
-			<input type="text" placeholder="gdhdjyztafkhdg125ksj" id="serialNum"/>
+		<div class="facturation-group">
+			<label for="serialNum" class="facturation-label">Num serie</label>
+			<input type="text" placeholder="gdhdjyztafkhdg125ksj" id="serialNum" class="wid90"/>
 		</div>
-		<div>
-			<label for="power">Puissance : </label>
-			<input type="text" placeholder="5" id="power"/>
+		<div class="facturation-group">
+			<label for="power" class="facturation-label">Puissance</label>
+			<input type="text" placeholder="5" id="power" class="wid90"/>
 		</div>
-		<div>
-			<label for="energy">Energie : </label>
-			<input type="text" placeholder="GO" id="energy"/>
+		<div class="facturation-group">
+			<label for="energy" class="facturation-label">Energie</label>
+			<input type="text" placeholder="GO" id="energy" class="wid90"/>
 		</div>
-		<div>
-			<label for="kind">Genre : </label>
-			<input type="text" placeholder="VP" id="kind"/>
+		<div class="facturation-group">
+			<label for="kind" class="facturation-label">Genre</label>
+			<input type="text" placeholder="VP" id="kind" class="wid90"/>
 		</div>
 	</div>
 
-	<div id="items">
+	<div id="items" class="facture-main">
 		<h3>Articles de la facture</h3>
-		<table id="Mytable" style="width:90%; border: none;">
+		<table id="Mytable" class="wid100">
 		  <tr>
-		    <th style="background-color: red; width: 50%">DESCRIPTION</th>
-		    <th style="background-color: red; width: 25%">QTE/TEMPS</th> 
-		    <th style="background-color: red; width: 25%">PX UNITAIRE</th>
+		    <th class="wid60">DESCRIPTION</th>
+		    <th class="wid20">QTE/TEMPS</th> 
+		    <th class="wid20">PX UNITAIRE</th>
 		  </tr>
 		  <tr>
-		    <td><input type="text" id="item0Desc"/></td>
+		    <td><input type="text" id="item0Desc" class="wid99"/></td>
 		    <td><input type="text" id="item0Qte"/></td>
 		    <td><input type="text" id="item0Price"/></td>
 		  </tr>
 		  <tr>
-		    <td><input type="text" id="item1Desc"/></td>
+		    <td><input type="text" id="item1Desc" class="wid99"/></td>
 		    <td><input type="text" id="item1Qte"/></td>
 		    <td><input type="text" id="item1Price"/></td>
 		  </tr>
 		  <tr>
-		    <td><input type="text" id="item2Desc"/></td>
+		    <td><input type="text" id="item2Desc" class="wid99"/></td>
 		    <td><input type="text" id="item2Qte"/></td>
 		    <td><input type="text" id="item2Price"/></td>
 		  </tr>
 		  <tr>
-		    <td><input type="text" id="item3Desc"/></td>
+		    <td><input type="text" id="item3Desc" class="wid99"/></td>
 		    <td><input type="text" id="item3Qte"/></td>
 		    <td><input type="text" id="item3Price"/></td>
 		  </tr>
 		  <tr>
-		    <td><input type="text" id="item4Desc"/></td>
+		    <td><input type="text" id="item4Desc" class="wid99"/></td>
 		    <td><input type="text" id="item4Qte"/></td>
 		    <td><input type="text" id="item4Price"/></td>
 		  </tr>
 		  <tr>
-		    <td><input type="text" id="item5Desc"/></td>
+		    <td><input type="text" id="item5Desc" class="wid99"/></td>
 		    <td><input type="text" id="item5Qte"/></td>
 		    <td><input type="text" id="item5Price"/></td>
 		  </tr>
 		  <tr>
-		    <td><input type="text" id="item6Desc"/></td>
+		    <td><input type="text" id="item6Desc" class="wid99"/></td>
 		    <td><input type="text" id="item6Qte"/></td>
 		    <td><input type="text" id="item6Price"/></td>
 		  </tr>
 		  <tr>
-		    <td><input type="text" id="item7Desc"/></td>
+		    <td><input type="text" id="item7Desc" class="wid99"/></td>
 		    <td><input type="text" id="item7Qte"/></td>
 		    <td><input type="text" id="item7Price"/></td>
 		  </tr>
 		  <tr>
-		    <td><input type="text" id="item8Desc"/></td>
+		    <td><input type="text" id="item8Desc" class="wid99"/></td>
 		    <td><input type="text" id="item8Qte"/></td>
 		    <td><input type="text" id="item8Price"/></td>
 		  </tr>
 		  <tr>
-		    <td><input type="text" id="item9Desc"/></td>
+		    <td><input type="text" id="item9Desc" class="wid99"/></td>
 		    <td><input type="text" id="item9Qte"/></td>
 		    <td><input type="text" id="item9Price"/></td>
 		  </tr>
 		  <tr>
-		    <td><input type="text" id="item10Desc"/></td>
+		    <td><input type="text" id="item10Desc" class="wid99"/></td>
 		    <td><input type="text" id="item10Qte"/></td>
 		    <td><input type="text" id="item10Price"/></td>
 		  </tr>
 		</table>
 	</div>
 
-</center>
-
-	<a href="javascript:pdfToHTML()">Créer la facture</a>
-
-	<script type="text/javascript" src="jspdf.min.js"></script>
-	<script type="text/javascript" src="pdfFromHTML.js"></script>
-	<script type="text/javascript" src="jspdf.plugin.autotable.js"></script>
+	<div id="createAction" class="facture-main padTop10 textCenter">
+		<a href="javascript:pdfToHTML()">Créer la facture</a>	
+	</div>
 </body>
 </html>
