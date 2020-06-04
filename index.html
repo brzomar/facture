@@ -22,11 +22,12 @@
 		}
 		a{
 			background-color: #58D68D;
-		    padding-right: 8px;
-		    padding-left: 8px;
+		    padding-right: 30px;
+		    padding-left: 30px;
 		    border-radius: 15px 15px 15px 15px;
 		    color: black;
 		    text-decoration: none;
+		    font-size: 34px;
 		}
 		.facturation-group{
 			display: flex;
@@ -34,30 +35,45 @@
 			padding: 2px;
 		}
 		.facturation-label{
-			width: 10%;
+			width: 20%;
 			text-align: right;
 			padding-right: 5px;
+			font-size: 30px;
 		}
-		.wid60{
-			width: 60%;
+		.facturation-input{
+			width: 80%;
+			font-size: 30px;
 		}
-		.wid20{
-			width: 20%;
+		.wid50{
+			width: 50%;
 		}
-		.wid90{
-			width: 90%;
+		.wid25{
+			width: 25%;
 		}
 		.wid100{
 			width: 100%;
 		}
-		.wid99{
-			width: 99.7%;
+		.facturation-input-tab{
+			width: 99.5%;
+			font-size: 25px;
+		}
+		.fontSize25{
+			font-size: 25px;
+		}
+		.fontSize30{
+			font-size: 30px;
 		}
 		.textCenter{
 			text-align: center;
 		}
 		.padTop10 {
 			padding-top: 10px;
+		}
+		h1 {
+			font-size: 35px;
+		}
+		h3{
+			font-size: 32px;
 		}
 	</style>
 </head>
@@ -68,19 +84,19 @@
 		<h3>Adresse de facturation</h3>
 		<div class="facturation-group">
 			<label for="name" class="facturation-label">Nom</label>
-			<input type="text" placeholder="Prénom et nom" id="name" class="wid90"/>
+			<input type="text" placeholder="Prénom et nom" id="name" class="facturation-input"/>
 		</div>
 		<div class="facturation-group">
 			<label for="adress" class="facturation-label">Adresse</label>
-			<input type="text" placeholder="13, rue de la Liberte" id="adress" class="wid90"/>
+			<input type="text" placeholder="13, rue de la Liberte" id="adress" class="facturation-input"/>
 		</div>
 		<div class="facturation-group">
 			<label for="zipCode" class="facturation-label">Code postal</label>
-			<input type="text" placeholder="04100" id="zipCode" class="wid90"/>
+			<input type="text" placeholder="04100" id="zipCode" class="facturation-input"/>
 		</div>
 		<div class="facturation-group">
 			<label for="city" class="facturation-label">Ville</label>
-			<input type="text" placeholder="Manosque" id="city" class="wid90"/>
+			<input type="text" placeholder="Manosque" id="city" class="facturation-input"/>
 		</div>
 	</div>
 
@@ -88,39 +104,39 @@
 		<h3>Véhicule</h3>
 		<div class="facturation-group">
 			<label for="brand" class="facturation-label">Marque</label>
-			<input type="text" placeholder="SEAT" id="brand" class="wid90"/>
+			<input type="text" placeholder="SEAT" id="brand" class="facturation-input"/>
 		</div>
 		<div class="facturation-group">
 			<label for="model" class="facturation-label">Modèle</label>
-			<input type="text" placeholder="IBIZA IV TDI" id="model" class="wid90"/>
+			<input type="text" placeholder="IBIZA IV TDI" id="model" class="facturation-input"/>
 		</div>
 		<div class="facturation-group">
 			<label for="firstDate" class="facturation-label">1ere MEC</label>
-			<input type="text" placeholder="01/01/2010" id="firstDate" class="wid90"/>
+			<input type="text" placeholder="01/01/2010" id="firstDate" class="facturation-input"/>
 		</div>
 		<div class="facturation-group">
 			<label for="registration" class="facturation-label">Immatriculation</label>
-			<input type="text" placeholder="AA123BB" id="registration" class="wid90"/>
+			<input type="text" placeholder="AA123BB" id="registration" class="facturation-input"/>
 		</div>
 		<div class="facturation-group">
 			<label for="kil" class="facturation-label">Kilometrage</label>
-			<input type="text" placeholder="100000" id="kil" class="wid90"/>
+			<input type="text" placeholder="100000" id="kil" class="facturation-input"/>
 		</div>
 		<div class="facturation-group">
 			<label for="serialNum" class="facturation-label">Num serie</label>
-			<input type="text" placeholder="gdhdjyztafkhdg125ksj" id="serialNum" class="wid90"/>
+			<input type="text" placeholder="gdhdjyztafkhdg125ksj" id="serialNum" class="facturation-input"/>
 		</div>
 		<div class="facturation-group">
 			<label for="power" class="facturation-label">Puissance</label>
-			<input type="text" placeholder="5" id="power" class="wid90"/>
+			<input type="text" placeholder="5" id="power" class="facturation-input"/>
 		</div>
 		<div class="facturation-group">
 			<label for="energy" class="facturation-label">Energie</label>
-			<input type="text" placeholder="GO" id="energy" class="wid90"/>
+			<input type="text" placeholder="GO" id="energy" class="facturation-input"/>
 		</div>
 		<div class="facturation-group">
 			<label for="kind" class="facturation-label">Genre</label>
-			<input type="text" placeholder="VP" id="kind" class="wid90"/>
+			<input type="text" placeholder="VP" id="kind" class="facturation-input"/>
 		</div>
 	</div>
 
@@ -128,64 +144,64 @@
 		<h3>Articles de la facture</h3>
 		<table id="Mytable" class="wid100">
 		  <tr>
-		    <th class="wid60">DESCRIPTION</th>
-		    <th class="wid20">QTE/TEMPS</th> 
-		    <th class="wid20">PX UNITAIRE</th>
+		    <th class="wid50 fontSize25">DESCRIPTION</th>
+		    <th class="wid25 fontSize25">QTE/TEMPS</th> 
+		    <th class="wid25 fontSize25">PX UNITAIRE</th>
 		  </tr>
 		  <tr>
-		    <td><input type="text" id="item0Desc" class="wid99" placeholder="1."/></td>
-		    <td><input type="text" id="item0Qte"/></td>
-		    <td><input type="text" id="item0Price"/></td>
+		    <td><input type="text" id="item0Desc" class="facturation-input-tab" placeholder="1."/></td>
+		    <td><input type="text" id="item0Qte" class="fontSize25"/></td>
+		    <td><input type="text" id="item0Price" class="fontSize25"/></td>
 		  </tr>
 		  <tr>
-		    <td><input type="text" id="item1Desc" class="wid99" placeholder="2."/></td>
-		    <td><input type="text" id="item1Qte"/></td>
-		    <td><input type="text" id="item1Price"/></td>
+		    <td><input type="text" id="item1Desc" class="facturation-input-tab" placeholder="2."/></td>
+		    <td><input type="text" id="item1Qte" class="fontSize25"/></td>
+		    <td><input type="text" id="item1Price" class="fontSize25"/></td>
 		  </tr>
 		  <tr>
-		    <td><input type="text" id="item2Desc" class="wid99" placeholder="3."/></td>
-		    <td><input type="text" id="item2Qte"/></td>
-		    <td><input type="text" id="item2Price"/></td>
+		    <td><input type="text" id="item2Desc" class="facturation-input-tab" placeholder="3."/></td>
+		    <td><input type="text" id="item2Qte" class="fontSize25"/></td>
+		    <td><input type="text" id="item2Price" class="fontSize25"/></td>
 		  </tr>
 		  <tr>
-		    <td><input type="text" id="item3Desc" class="wid99" placeholder="4."/></td>
-		    <td><input type="text" id="item3Qte"/></td>
-		    <td><input type="text" id="item3Price"/></td>
+		    <td><input type="text" id="item3Desc" class="facturation-input-tab" placeholder="4."/></td>
+		    <td><input type="text" id="item3Qte" class="fontSize25"/></td>
+		    <td><input type="text" id="item3Price" class="fontSize25"/></td>
 		  </tr>
 		  <tr>
-		    <td><input type="text" id="item4Desc" class="wid99" placeholder="5."/></td>
-		    <td><input type="text" id="item4Qte"/></td>
-		    <td><input type="text" id="item4Price"/></td>
+		    <td><input type="text" id="item4Desc" class="facturation-input-tab" placeholder="5."/></td>
+		    <td><input type="text" id="item4Qte" class="fontSize25"/></td>
+		    <td><input type="text" id="item4Price" class="fontSize25"/></td>
 		  </tr>
 		  <tr>
-		    <td><input type="text" id="item5Desc" class="wid99" placeholder="6."/></td>
-		    <td><input type="text" id="item5Qte"/></td>
-		    <td><input type="text" id="item5Price"/></td>
+		    <td><input type="text" id="item5Desc" class="facturation-input-tab" placeholder="6."/></td>
+		    <td><input type="text" id="item5Qte" class="fontSize25"/></td>
+		    <td><input type="text" id="item5Price" class="fontSize25"/></td>
 		  </tr>
 		  <tr>
-		    <td><input type="text" id="item6Desc" class="wid99" placeholder="7."/></td>
-		    <td><input type="text" id="item6Qte"/></td>
-		    <td><input type="text" id="item6Price"/></td>
+		    <td><input type="text" id="item6Desc" class="facturation-input-tab" placeholder="7."/></td>
+		    <td><input type="text" id="item6Qte" class="fontSize25"/></td>
+		    <td><input type="text" id="item6Price" class="fontSize25"/></td>
 		  </tr>
 		  <tr>
-		    <td><input type="text" id="item7Desc" class="wid99" placeholder="8."/></td>
-		    <td><input type="text" id="item7Qte"/></td>
-		    <td><input type="text" id="item7Price"/></td>
+		    <td><input type="text" id="item7Desc" class="facturation-input-tab" placeholder="8."/></td>
+		    <td><input type="text" id="item7Qte" class="fontSize25"/></td>
+		    <td><input type="text" id="item7Price" class="fontSize25"/></td>
 		  </tr>
 		  <tr>
-		    <td><input type="text" id="item8Desc" class="wid99" placeholder="9."/></td>
-		    <td><input type="text" id="item8Qte"/></td>
-		    <td><input type="text" id="item8Price"/></td>
+		    <td><input type="text" id="item8Desc" class="facturation-input-tab" placeholder="9."/></td>
+		    <td><input type="text" id="item8Qte" class="fontSize25"/></td>
+		    <td><input type="text" id="item8Price" class="fontSize25"/></td>
 		  </tr>
 		  <tr>
-		    <td><input type="text" id="item9Desc" class="wid99" placeholder="10."/></td>
-		    <td><input type="text" id="item9Qte"/></td>
-		    <td><input type="text" id="item9Price"/></td>
+		    <td><input type="text" id="item9Desc" class="facturation-input-tab" placeholder="10."/></td>
+		    <td><input type="text" id="item9Qte" class="fontSize25"/></td>
+		    <td><input type="text" id="item9Price" class="fontSize25"/></td>
 		  </tr>
 		  <tr>
-		    <td><input type="text" id="item10Desc" class="wid99" placeholder="11."/></td>
-		    <td><input type="text" id="item10Qte"/></td>
-		    <td><input type="text" id="item10Price"/></td>
+		    <td><input type="text" id="item10Desc" class="facturation-input-tab" placeholder="11."/></td>
+		    <td><input type="text" id="item10Qte" class="fontSize25"/></td>
+		    <td><input type="text" id="item10Price" class="fontSize25"/></td>
 		  </tr>
 		</table>
 	</div>
