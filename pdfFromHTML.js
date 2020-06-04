@@ -9,11 +9,11 @@ pdf.setFontStyle("bold");
 pdf.text("FODIL AUTOS", 20, 30);
 pdf.setFontSize(8);
 pdf.setFontStyle("normal");
-pdf.text("Entretien et reparation de vehicules automobiles legers (4520A)", 20, 35);
+pdf.text("Entretien et réparation de véhicules automobiles legers (4520A)", 20, 35);
 pdf.setFontSize(11);
 pdf.setFontStyle("normal");
-pdf.text("183 RUE DE L ABBE HENRI ALIVON", 20, 40);
-pdf.text("04100 MANOSQUE", 20, 45);
+pdf.text("183 Reu de l'Abbé Henri Alivon", 20, 40);
+pdf.text("04100 Manosque", 20, 45);
 pdf.text("Tel : 06 61 58 12 83", 20, 50);
 pdf.text("SIRET : 87936932000020", 20, 55);
 
@@ -49,7 +49,7 @@ var kind = document.getElementById('kind').value;
 
 
 pdf.autoTable({
-  head: [['Marque', 'Modele', '1ere MEC', 'Immatriculation', 'Kilometrage']],
+  head: [['Marque', 'Modèle', '1ère MEC', 'Immatriculation', 'Kilometrage']],
   body: [
     [brand, model, firstDate, registration, kil],
   ],
@@ -59,7 +59,7 @@ pdf.autoTable({
 });
 
 pdf.autoTable({
-  head: [['N Serie', 'Puissance', 'Energie', 'Genre']],
+  head: [['N° Série', 'Puissance', 'Énergie', 'Genre']],
   body: [
     [serialNum, power, energy, kind],
   ],
