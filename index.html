@@ -44,24 +44,15 @@
 			width: 80%;
 			font-size: 30px;
 		}
-		.wid50{
-			width: 50%;
+		.wid60{
+			width: 60%;
 		}
-		.wid25{
-			width: 25%;
-		}
-		.wid100{
-			width: 100%;
+		.wid20{
+			width: 20%;
 		}
 		.facturation-input-tab{
 			width: 99.5%;
 			font-size: 25px;
-		}
-		.fontSize25{
-			font-size: 25px;
-		}
-		.fontSize30{
-			font-size: 30px;
 		}
 		.textCenter{
 			text-align: center;
@@ -74,6 +65,11 @@
 		}
 		h3{
 			font-size: 32px;
+		}
+		table{
+			width: 100%;
+			table-layout: fixed;
+			font-size: 25px;
 		}
 	</style>
 </head>
@@ -142,66 +138,71 @@
 
 	<div id="items" class="facture-main">
 		<h3>Articles de la facture</h3>
-		<table id="Mytable" class="wid100">
+		<table id="Mytable">
+		  <colgroup>
+		    <col class="wid60" />
+		    <col class="wid20" />
+		    <col class="wid20" />
+		  </colgroup>
 		  <tr>
-		    <th class="wid50 fontSize25">DESCRIPTION</th>
-		    <th class="wid25 fontSize25">QTE/TEMPS</th> 
-		    <th class="wid25 fontSize25">PX UNITAIRE</th>
+		    <th>DESCRIPTION</th>
+		    <th>QTE/TEMPS</th> 
+		    <th>PX UNITAIRE</th>
 		  </tr>
 		  <tr>
 		    <td><input type="text" id="item0Desc" class="facturation-input-tab" placeholder="1."/></td>
-		    <td><input type="text" id="item0Qte" class="fontSize25"/></td>
-		    <td><input type="text" id="item0Price" class="fontSize25"/></td>
+		    <td><input type="text" id="item0Qte" class="facturation-input-tab"/></td>
+		    <td><input type="text" id="item0Price" class="facturation-input-tab"/></td>
 		  </tr>
 		  <tr>
 		    <td><input type="text" id="item1Desc" class="facturation-input-tab" placeholder="2."/></td>
-		    <td><input type="text" id="item1Qte" class="fontSize25"/></td>
-		    <td><input type="text" id="item1Price" class="fontSize25"/></td>
+		    <td><input type="text" id="item1Qte" class="facturation-input-tab"/></td>
+		    <td><input type="text" id="item1Price" class="facturation-input-tab"/></td>
 		  </tr>
 		  <tr>
 		    <td><input type="text" id="item2Desc" class="facturation-input-tab" placeholder="3."/></td>
-		    <td><input type="text" id="item2Qte" class="fontSize25"/></td>
-		    <td><input type="text" id="item2Price" class="fontSize25"/></td>
+		    <td><input type="text" id="item2Qte" class="facturation-input-tab"/></td>
+		    <td><input type="text" id="item2Price" class="facturation-input-tab"/></td>
 		  </tr>
 		  <tr>
 		    <td><input type="text" id="item3Desc" class="facturation-input-tab" placeholder="4."/></td>
-		    <td><input type="text" id="item3Qte" class="fontSize25"/></td>
-		    <td><input type="text" id="item3Price" class="fontSize25"/></td>
+		    <td><input type="text" id="item3Qte" class="facturation-input-tab"/></td>
+		    <td><input type="text" id="item3Price" class="facturation-input-tab"/></td>
 		  </tr>
 		  <tr>
 		    <td><input type="text" id="item4Desc" class="facturation-input-tab" placeholder="5."/></td>
-		    <td><input type="text" id="item4Qte" class="fontSize25"/></td>
-		    <td><input type="text" id="item4Price" class="fontSize25"/></td>
+		    <td><input type="text" id="item4Qte" class="facturation-input-tab"/></td>
+		    <td><input type="text" id="item4Price" class="facturation-input-tab"/></td>
 		  </tr>
 		  <tr>
 		    <td><input type="text" id="item5Desc" class="facturation-input-tab" placeholder="6."/></td>
-		    <td><input type="text" id="item5Qte" class="fontSize25"/></td>
-		    <td><input type="text" id="item5Price" class="fontSize25"/></td>
+		    <td><input type="text" id="item5Qte" class="facturation-input-tab"/></td>
+		    <td><input type="text" id="item5Price" class="facturation-input-tab"/></td>
 		  </tr>
 		  <tr>
 		    <td><input type="text" id="item6Desc" class="facturation-input-tab" placeholder="7."/></td>
-		    <td><input type="text" id="item6Qte" class="fontSize25"/></td>
-		    <td><input type="text" id="item6Price" class="fontSize25"/></td>
+		    <td><input type="text" id="item6Qte" class="facturation-input-tab"/></td>
+		    <td><input type="text" id="item6Price" class="facturation-input-tab"/></td>
 		  </tr>
 		  <tr>
 		    <td><input type="text" id="item7Desc" class="facturation-input-tab" placeholder="8."/></td>
-		    <td><input type="text" id="item7Qte" class="fontSize25"/></td>
-		    <td><input type="text" id="item7Price" class="fontSize25"/></td>
+		    <td><input type="text" id="item7Qte" class="facturation-input-tab"/></td>
+		    <td><input type="text" id="item7Price" class="facturation-input-tab"/></td>
 		  </tr>
 		  <tr>
 		    <td><input type="text" id="item8Desc" class="facturation-input-tab" placeholder="9."/></td>
-		    <td><input type="text" id="item8Qte" class="fontSize25"/></td>
-		    <td><input type="text" id="item8Price" class="fontSize25"/></td>
+		    <td><input type="text" id="item8Qte" class="facturation-input-tab"/></td>
+		    <td><input type="text" id="item8Price" class="facturation-input-tab"/></td>
 		  </tr>
 		  <tr>
 		    <td><input type="text" id="item9Desc" class="facturation-input-tab" placeholder="10."/></td>
-		    <td><input type="text" id="item9Qte" class="fontSize25"/></td>
-		    <td><input type="text" id="item9Price" class="fontSize25"/></td>
+		    <td><input type="text" id="item9Qte" class="facturation-input-tab"/></td>
+		    <td><input type="text" id="item9Price" class="facturation-input-tab"/></td>
 		  </tr>
 		  <tr>
 		    <td><input type="text" id="item10Desc" class="facturation-input-tab" placeholder="11."/></td>
-		    <td><input type="text" id="item10Qte" class="fontSize25"/></td>
-		    <td><input type="text" id="item10Price" class="fontSize25"/></td>
+		    <td><input type="text" id="item10Qte" class="facturation-input-tab"/></td>
+		    <td><input type="text" id="item10Price" class="facturation-input-tab"/></td>
 		  </tr>
 		</table>
 	</div>
