@@ -33,7 +33,7 @@
 			display: flex;
 			flex-direction: row;
 			padding: 2px;
-			margin-bottom: 7px;
+			margin-bottom: 5px;
 		}
 		.facturation-label{
 			width: 20%;
@@ -48,13 +48,19 @@
 		.wid60{
 			width: 60%;
 		}
+		.wid42{
+			width: 42%;
+		}
 		.wid20{
 			width: 20%;
+		}
+		.wid15{
+			width: 15%;
 		}
 		.facturation-input-tab{
 			width: 99.5%;
 			font-size: 25px;
-			margin-bottom: 8px;
+			margin-bottom: 5px;
 		}
 		.textCenter{
 			text-align: center;
@@ -79,10 +85,9 @@
 	<h1 class="facture-main textCenter">Création de facture pour  : FODIL AUTOS</h1>
 
 	<div id="invoiceDate" class="facture-main">
-		<h3>Date de facturation</h3>
 		<div class="facturation-group">
-			<label for="inputDate" class="facturation-label">Date facturation(jj/mm/aaaa)</label>
-			<input type="text" id="inputDate" class="facturation-input"/>
+			<label for="inputDate" class="facturation-label wid42">Date de facturation (jj/mm/aaaa)</label>
+			<input type="text" id="inputDate" class="facturation-input wid15"/>
 		</div>
 	</div>
 
