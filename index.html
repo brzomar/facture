@@ -75,8 +75,16 @@
 		}
 	</style>
 </head>
-<body>
+<body onload="initDate()">
 	<h1 class="facture-main textCenter">Création de facture pour  : FODIL AUTOS</h1>
+
+	<div id="invoiceDate" class="facture-main">
+		<h3>Date de facturation</h3>
+		<div class="facturation-group">
+			<label for="inputDate" class="facturation-label">Date facturation(jj/mm/aaaa)</label>
+			<input type="text" id="inputDate" class="facturation-input"/>
+		</div>
+	</div>
 
 	<div id="invoiceAdress" class="facture-main">
 		<h3>Adresse de facturation</h3>
