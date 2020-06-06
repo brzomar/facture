@@ -1,7 +1,7 @@
 async function pdfToHTML(){
 var pdf = new jsPDF();
 
-var facturationDate = new Date();
+var invoiceDate = new Date();
 
 // Garage
 pdf.setFontSize(14);
@@ -9,11 +9,11 @@ pdf.setFontStyle("bold");
 pdf.text("FODIL AUTOS", 20, 30);
 pdf.setFontSize(8);
 pdf.setFontStyle("normal");
-pdf.text("Entretien et réparation de véhicules automobiles legers (4520A)", 20, 35);
+pdf.text("Entretien et reparation de vehicules automobiles legers (4520A)", 20, 35);
 pdf.setFontSize(11);
 pdf.setFontStyle("normal");
-pdf.text("183 Reu de l'Abbé Henri Alivon", 20, 40);
-pdf.text("04100 Manosque", 20, 45);
+pdf.text("183 RUE DE L ABBE HENRI ALIVON", 20, 40);
+pdf.text("04100 MANOSQUE", 20, 45);
 pdf.text("Tel : 06 61 58 12 83", 20, 50);
 pdf.text("SIRET : 87936932000020", 20, 55);
 
@@ -33,8 +33,9 @@ pdf.setFontStyle("bold");
 pdf.text("FACTURE", 20, 70);
 pdf.setFontSize(11);
 pdf.setFontStyle("normal");
-pdf.text("Numero  : " + timeRef(facturationDate), 20, 75);
-pdf.text("Date    : " + formattedDate(facturationDate), 20, 80);
+pdf.text("Numero  : " + timeRef(invoiceDate), 20, 75);
+var inputDate = document.getElementById('inputDate').value;
+pdf.text("Date    : " + inputDate, 20, 80);
 
 // Voiture
 var brand = document.getElementById('brand').value;
@@ -49,7 +50,7 @@ var kind = document.getElementById('kind').value;
 
 
 pdf.autoTable({
-  head: [['Marque', 'Modèle', '1ère MEC', 'Immatriculation', 'Kilometrage']],
+  head: [['Marque', 'Modele', '1ere MEC', 'Immatriculation', 'Kilometrage']],
   body: [
     [brand, model, firstDate, registration, kil],
   ],
@@ -59,7 +60,7 @@ pdf.autoTable({
 });
 
 pdf.autoTable({
-  head: [['N° Série', 'Puissance', 'Énergie', 'Genre']],
+  head: [['N Serie', 'Puissance', 'Energie', 'Genre']],
   body: [
     [serialNum, power, energy, kind],
   ],
@@ -150,7 +151,7 @@ pdf.autoTable({
   margin: {top: 0, right: 0, bottom: 0, left: 126},
 });
 
-pdf.save('facture_'+ timeRef(facturationDate) +'.pdf');
+pdf.save('facture_'+ timeRef(invoiceDate) +'.pdf');
 }
 
 
@@ -177,4 +178,10 @@ function timeRef(d) {
   let s = String(d.getSeconds());  
   if (s.length < 2) s = '0' + s;
   return `${day}${month}${h}${m}${s}`;
+}
+
+function initDate(){
+  var date = new Date();
+  document.getElementById('inputDate').value = formattedDate(date);
+  return true;
 }
