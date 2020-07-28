@@ -137,12 +137,17 @@ var totalTTC = (item0Qte*item0Price) + (item1Qte*item1Price) + (item2Qte*item2Pr
 (item3Qte*item3Price) + (item4Qte*item4Price) + (item5Qte*item5Price) +
 (item6Qte*item6Price) + (item7Qte*item7Price) + (item8Qte*item8Price) +   
 (item9Qte*item9Price) + (item10Qte*item10Price);
-var TVA = (totalTTC*20)/100;
+
+// Check TVA 
+var isTva = document.getElementById("isTva").checked;
+var tvaValue = isTva ? 20 : 0;
+
+var TVA = (totalTTC*tvaValue)/100;
 var totalHT = totalTTC - TVA;
 
 // Total + TVA
 pdf.autoTable({
-  head: [['TOTAL HT', 'TVA (20%)', 'TOTAL TTC']],
+  head: [['TOTAL HT', 'TVA (' + tvaValue + '%)', 'TOTAL TTC']],
   body: [
     [totalHT.toFixed(3).slice(0,-1), TVA.toFixed(3).slice(0,-1), totalTTC.toFixed(3).slice(0,-1) + ' EUR'],
   ],
