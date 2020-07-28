@@ -76,6 +76,9 @@
 			table-layout: fixed;
 			font-size: 25px;
 		}
+		.zoom2 {
+			zoom: 2;
+		}
 	</style>
 </head>
 <body onload="initDate()">
@@ -217,6 +220,11 @@
 		    <td><input type="text" id="item10Price" class="facturation-input-tab"/></td>
 		  </tr>
 		</table>
+	</div>
+
+	<div>
+		<label for="isTva" class="facturation-label">Avec TVA</label>
+	  	<input type="checkbox" id="isTva" class="zoom2">
 	</div>
 
 	<div id="createAction" class="facture-main padTop10 textCenter">
