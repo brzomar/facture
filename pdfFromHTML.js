@@ -28,9 +28,10 @@ pdf.text(adress, 125, 60);
 pdf.text(zipCode + ', ' + city, 125, 65);
 
 // Facture
+var documentTypeValue = document.getElementById('documentType').value;  
 pdf.setFontSize(14);
 pdf.setFontStyle("bold");
-pdf.text("FACTURE", 20, 70);
+pdf.text(documentTypeValue, 20, 70);
 pdf.setFontSize(11);
 pdf.setFontStyle("normal");
 pdf.text("Numero  : " + timeRef(invoiceDate), 20, 75);
