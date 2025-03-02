@@ -86,6 +86,13 @@
 
 	<div id="invoiceDate" class="facture-main">
 		<div class="facturation-group">
+			<label for="documentType" class="facturation-label wid50">Facture Ou Devis</label>
+			<select name="documentType" id="documentType" class="facturation-input wid50">
+				<option value="quote">Devis</option>
+    				<option value="invoice">Facture</option>
+		  	</select>
+		</div>
+		<div class="facturation-group">
 			<label for="inputDate" class="facturation-label wid50">Date de facturation (jj/mm/aaaa)</label>
 			<input type="text" id="inputDate" class="facturation-input wid50"/>
 		</div>
